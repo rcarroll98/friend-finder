@@ -1,0 +1,16 @@
+<h1>Friend Finder</h1>
+
+<p>Find single friends in your area</p>
+
+{{#each question}}
+    <form>
+        <input type="radio" id={{this.question1}}> name={{this.name1}} />
+        <label for={{this.question1}}>{{this.label1}}</label>
+        <input type="radio" id={{this.question2}}> name={{this.name2}} />
+        <label for={{this.question2}}>{{this.label2}}</label>
+        <input type="radio" id={{this.question3}}> name={{this.name3}} />
+        <label for={{this.question3]}}>{{this.label3}}</label>
+        <input type="radio" id={{this.question4}}> name={{this.name4}} />
+        <label for={{this.question4}}>{{this.label4}}</label>
+    </form>
+{{/each}}
