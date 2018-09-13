@@ -1,10 +1,14 @@
 require("express");
 
-app.get("/survey", function(res, err){
-    res.render(survey.html);
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/", function(res, err){
-    res.render(index.html);
+app.get("/survey", function(req, res){
+    res.sendFile(path.join(__dirname, "survey.html"));
 });
+
+
+
+
 
