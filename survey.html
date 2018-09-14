@@ -26,8 +26,41 @@
             <label for="name">Enter your first and last name</label>
             <input type = "text" id="photo">
             <label for="photo">Enter an image url</label>
-            <div class="row survey-section">
-
+            <div class="row survey-section" id="survey-section">
+                
             </div>
         </form>
+        <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Submit Survey</button>
+        <script type="text/javascript">
+            var questionData = [
+                {name:"You find it difficult to introduce yourself to other people.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You are a low energy person.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You like to keep things organized.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"Your mood does not change very quickly.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You would rather play video games than go out.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You feel more energized after spending time by yourself", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You find it difficult to relax while talking in front of a croud.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You feel anxious in stressful situations.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You have very specific and uncommon interests.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"},
+                {name:"You tend not to take initiative in social situations.", one: "1 (Strongly Disagree)", two:"2" , three: "3" , four:"4", five: "5 (Strongly Agree)"}
+            ];
+            // displays data on page
+            function displaySurveyContent(questionData){
+                
+                for (var i = 0; i < questionData.length; i++) {
+                    console.log(questionData[i]);
+                    var question = $("<div class='question'/>")
+                    question.append($("<h2>")).text(questionData[i].name);
+                    question.append($("<input type=" +"'radio' " + "value=" + 1 + ">" + questionData[i].one + '</input>'));
+                    question.append($("<input type=" +"'radio' "+"value=" + 2 + ">" + questionData[i].two + '</input>'));
+                    question.append($("<input type=" +"'radio' "+"value=" + 3 + ">" + questionData[i].three + '</input>'));
+                    question.append($("<input type=" +"'radio' "+"value=" + 4 + ">" + questionData[i].four + '</input>'));
+                    question.append($("<input type=" +"'radio' "+"value=" + 5 + ">" + questionData[i].five + '</input>'));
+                    $("#survey-section").append(question);
+                    console.log(question)};
+                    question.append()
+            }
+            displaySurveyContent(questionData);
+        </script>
+</div>
 </html>

@@ -1,4 +1,3 @@
-
 // Used to display a JSON of all possible friends
 app.get("/api/friends", function(data){
     for (var i = 0; i < data.length; i++) {
@@ -28,4 +27,3 @@ app.listen(PORT, function() {
     // Log (server-side) when our server has started
     console.log("Server listening on: http://localhost:" + PORT);
 });
-
